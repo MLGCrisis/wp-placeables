@@ -112,7 +112,7 @@ local pushAndLieTargetOptions = {
         }
     },
     {
-        event = exports["rpemotes"]:EmoteCommandStart('passout3', textureVariation),
+        event = "rpemotes:EmoteCommandStart(passout3)",
         icon = "fas fa-bed",
         label = "Lie on Bed",
         animationSitOptions = {
@@ -150,7 +150,7 @@ local chairCustomTargetOptions = {
 
 local LieCustomTargetOptions = {
     {
-        event = exports["rpemotes"]:EmoteCommandStart('passout3', textureVariation),
+        event = "rpemotes:EmoteCommandStart(passout3)",
         icon = "fas fa-bed",
         label = "Lie down",
     },
