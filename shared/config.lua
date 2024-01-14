@@ -99,6 +99,31 @@ local pushAndSitTargetOptions = {
     },
 }
 
+local pushAndLieTargetOptions = {
+    {
+        event = "wp-placeables:client:pushObject",
+        icon = "fas fa-shopping-cart",
+        label = "Push object",
+        animationPushOptions = {
+            offset = {x =  -0.4, y = -1.7, z = -0.3},
+            rotation = {x = 0.0, y = 0.0, z = 180.0},
+            animationDict = "missfinale_c2ig_11",
+            animationName = "pushcar_offcliff_f",
+        }
+    },
+    {
+        event = exports["rpemotes"]:EmoteCommandStart('passout3', textureVariation),
+        icon = "fas fa-bed",
+        label = "Lie on Bed",
+        animationSitOptions = {
+            offset = {x = 0.0, y = 0.15, z = 0.85},
+            rotation = {x = 0.0, y = 10.0, z = 175.0},
+            animationDict = "anim@gangops@morgue@table@",
+            animationName = "body_search",
+        }
+    },
+}
+
 local pushTargetOptions = {
     {
         event = "wp-placeables:client:pushObject",
@@ -123,23 +148,31 @@ local chairCustomTargetOptions = {
     },
 }
 
+local LieCustomTargetOptions = {
+    {
+        event = exports["rpemotes"]:EmoteCommandStart('passout3', textureVariation),
+        icon = "fas fa-bed",
+        label = "Lie down",
+    },
+}
+
 -- Uncomment this line if you are using wp-yogamats
--- local yogaCustomTargetOptions = {
---     {
---         event = "wp-yogamats:client:useYogaMat",
---         icon = "fas fa-pray",
---         label = "Do yoga",
---     },
--- }
+ local yogaCustomTargetOptions = {
+     {
+         event = "wp-yogamats:client:useYogaMat",
+         icon = "fas fa-pray",
+         label = "Do yoga",
+     },
+ }
 
 -- Uncomment this line if you are using wp-printer
--- local printerCustomTargetOptions = {
---     {
---         event = "wp-printer:client:UsePrinter",
---         icon = "fas fa-print",
---         label = "Use printer",
---     },
--- }
+ local printerCustomTargetOptions = {
+     {
+         event = "wp-printer:client:UsePrinter",
+         icon = "fas fa-print",
+         label = "Use printer",
+     },
+ }
 
 -- Uncomment this line if you are using wp-fireworks
 -- local fireworkCustomTargetOptions = {
@@ -306,6 +339,7 @@ Config.PlaceableProps = {
     {item = "shoppingcart2", label = "Shopping Cart (Full)", model = "prop_skid_trolley_2", isFrozen = false, customTargetOptions = pushTargetOptions},
     {item = "shoppingcart3", label = "Shopping Cart (Empty)", model = "prop_rub_trolley02a", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
     {item = "shoppingcart4", label = "Shopping Cart (Full)", model = "prop_skid_trolley_1", isFrozen = false, customTargetOptions = pushTargetOptions},
+    {item = "strykergurney", label = "Stretcher 1", model = "strykergurney", isFrozen = false, customTargetOptions = pushAndLieTargetOptions},
     {item = "wheelbarrow", label = "Wheelbarrow", model = "prop_wheelbarrow01a", isFrozen = false,
         customTargetOptions = setCustomTargetOptions(
             pushAndSitTargetOptions, {
@@ -506,17 +540,17 @@ Config.PlaceableProps = {
 
     -- Yogamats
     -- Uncomment this line if you are using wp-yogamats
-    -- {item = "yogamat_blue", label = "Yoga mat (Blue)", model = "prop_yoga_mat_01", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
-    -- {item = "yogamat_black", label = "Yoga mat (Black)", model = "prop_yoga_mat_02", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
-    -- {item = "yogamat_red", label = "Yoga mat (Red)", model = "prop_yoga_mat_03", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
+    {item = "yogamat_blue", label = "Yoga mat (Blue)", model = "prop_yoga_mat_01", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
+    {item = "yogamat_black", label = "Yoga mat (Black)", model = "prop_yoga_mat_02", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
+    {item = "yogamat_red", label = "Yoga mat (Red)", model = "prop_yoga_mat_03", isFrozen = true, customTargetOptions = yogaCustomTargetOptions},
 
     -- Printers
     -- Uncomment this line if you are using wp-printer
-    -- {item = "printer", label = "Printer", model = "prop_printer_01", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
-    -- {item = "printer2", label = "Printer", model = "prop_printer_02", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
-    -- {item = "printer3", label = "Printer", model = "v_res_printer", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
-    -- {item = "printer4", label = "Printer", model = "v_ret_gc_print", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
-    -- {item = "photocopier", label = "Photocopier", model = "v_med_cor_photocopy", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
+    {item = "printer", label = "Printer", model = "prop_printer_01", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
+    {item = "printer2", label = "Printer", model = "prop_printer_02", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
+    {item = "printer3", label = "Printer", model = "v_res_printer", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
+    {item = "printer4", label = "Printer", model = "v_ret_gc_print", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
+    {item = "photocopier", label = "Photocopier", model = "v_med_cor_photocopy", isFrozen = true, customTargetOptions = printerCustomTargetOptions},
     
     -- Fireworks
     -- Uncomment this line if you are using wp-fireworks
