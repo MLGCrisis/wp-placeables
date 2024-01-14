@@ -322,7 +322,9 @@ Config.PlaceableProps = {
     {item = "shoppingcart2", label = "Shopping Cart (Full)", model = "prop_skid_trolley_2", isFrozen = false, customTargetOptions = pushTargetOptions},
     {item = "shoppingcart3", label = "Shopping Cart (Empty)", model = "prop_rub_trolley02a", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
     {item = "shoppingcart4", label = "Shopping Cart (Full)", model = "prop_skid_trolley_1", isFrozen = false, customTargetOptions = pushTargetOptions},
-    {item = "strykergurney", label = "Stretcher 1", model = "strykergurney", isFrozen = true, customTargetOptions = pushAndSitTargetOptions},
+    {item = "strykergurney", label = "Stretcher 1", model = "strykergurney", isFrozen = false},
+    {item = "fernocot", label = "Stretcher 3", model = "fernocot", isFrozen = false},
+    {item = "combicarrier2", label = "Stretcher 2", model = "combicarrier2", isFrozen = false},
     {item = "wheelbarrow", label = "Wheelbarrow", model = "prop_wheelbarrow01a", isFrozen = false,
         customTargetOptions = setCustomTargetOptions(
             pushAndSitTargetOptions, {
