@@ -97,20 +97,17 @@ local pushAndSitTargetOptions = {
             animationName = "sit_phone_phoneputdown_idle_nowork",
         }
     },
-}
-
-local pushAndLieTargetOptions = {
-    {
-        event = "wp-placeables:client:pushObject",
-        icon = "fas fa-shopping-cart",
-        label = "Push object",
-        animationPushOptions = {
-            offset = {x =  -0.4, y = -1.7, z = -0.3},
-            rotation = {x = 0.0, y = 0.0, z = 180.0},
-            animationDict = "missfinale_c2ig_11",
-            animationName = "pushcar_offcliff_f",
+    --[[{
+        event = "ChairBedSystem:Client:Animation",
+        icon = "fas fa-chair",
+        label = "Lie on bed",
+        animationSitOptions = {
+            offset = {x = 0.0, y = 0.15, z = 0.85},
+            rotation = {x = 0.0, y = 10.0, z = 175.0},
+            animationDict = "anim@gangops@morgue@table@",
+            animationName = "body_search",
         }
-    },
+    },]]
 }
 
 local pushTargetOptions = {
@@ -135,6 +132,11 @@ local chairCustomTargetOptions = {
         icon = "fas fa-chair",
         label = "Sit down",
     },
+    --[[{
+        event = 'ChairBedSystem:Client:Animation, function(v coords)', 
+        icon = "fas fa-bed",
+        label = "Lie down",
+    },]]
 }
 
 -- Uncomment this line if you are using wp-yogamats
