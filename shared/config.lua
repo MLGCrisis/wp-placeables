@@ -111,17 +111,6 @@ local pushAndLieTargetOptions = {
             animationName = "pushcar_offcliff_f",
         }
     },
-    {
-        event = "rpemotes:EmoteCommandStart(passout3)",
-        icon = "fas fa-bed",
-        label = "Lie on Bed",
-        animationSitOptions = {
-            offset = {x = 0.0, y = 0.15, z = 0.85},
-            rotation = {x = 0.0, y = 10.0, z = 175.0},
-            animationDict = "anim@gangops@morgue@table@",
-            animationName = "body_search",
-        }
-    },
 }
 
 local pushTargetOptions = {
@@ -145,14 +134,6 @@ local chairCustomTargetOptions = {
         event = "qb-sit:sit",
         icon = "fas fa-chair",
         label = "Sit down",
-    },
-}
-
-local LieCustomTargetOptions = {
-    {
-        event = "rpemotes:EmoteCommandStart(passout3)",
-        icon = "fas fa-bed",
-        label = "Lie down",
     },
 }
 
@@ -339,7 +320,7 @@ Config.PlaceableProps = {
     {item = "shoppingcart2", label = "Shopping Cart (Full)", model = "prop_skid_trolley_2", isFrozen = false, customTargetOptions = pushTargetOptions},
     {item = "shoppingcart3", label = "Shopping Cart (Empty)", model = "prop_rub_trolley02a", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
     {item = "shoppingcart4", label = "Shopping Cart (Full)", model = "prop_skid_trolley_1", isFrozen = false, customTargetOptions = pushTargetOptions},
-    {item = "strykergurney", label = "Stretcher 1", model = "strykergurney", isFrozen = false, customTargetOptions = pushAndLieTargetOptions},
+    {item = "strykergurney", label = "Stretcher 1", model = "strykergurney", isFrozen = true, customTargetOptions = pushAndSitTargetOptions},
     {item = "wheelbarrow", label = "Wheelbarrow", model = "prop_wheelbarrow01a", isFrozen = false,
         customTargetOptions = setCustomTargetOptions(
             pushAndSitTargetOptions, {
