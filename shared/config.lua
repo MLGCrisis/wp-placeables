@@ -322,8 +322,22 @@ Config.PlaceableProps = {
     {item = "shoppingcart2", label = "Shopping Cart (Full)", model = "prop_skid_trolley_2", isFrozen = false, customTargetOptions = pushTargetOptions},
     {item = "shoppingcart3", label = "Shopping Cart (Empty)", model = "prop_rub_trolley02a", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
     {item = "shoppingcart4", label = "Shopping Cart (Full)", model = "prop_skid_trolley_1", isFrozen = false, customTargetOptions = pushTargetOptions},
-    {item = "prop_wheelchair_01", label = "Wheelchair 1", model = "prop_wheelchair_01", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
-    {item = "prop_wheelchair_01_s", label = "Wheelchair 2", model = "prop_wheelchair_01_s", isFrozen = false, customTargetOptions = pushAndSitTargetOptions},
+    {item = "prop_wheelchair_01", label = "Wheelchair 1", model = "prop_wheelchair_01", isFrozen = false, 
+            customTargetOptions = setCustomTargetOptions(
+                pushAndSitTargetOptions, {
+                    offset = {x =  -0.4, y = -1.8, z = -0.6},
+                    rotation = {x = 0.0, y = 20.0, z = 90.0},
+                    animationDict = "missfinale_c2ig_11",
+                    animationName = "pushcar_offcliff_f",
+                }, {
+                    offset = {x = -0.00, y = -0.3, z = -0.73},
+            rotation = {x = 195.0, y = 180.0, z = 180.0},
+                    animationDict = "timetable@ron@ron_ig_2_alt1",
+                    animationName = "ig_2_alt1_base",
+                }
+            )
+        },
+
     {item = "wheelbarrow", label = "Wheelbarrow", model = "prop_wheelbarrow01a", isFrozen = false,
         customTargetOptions = setCustomTargetOptions(
             pushAndSitTargetOptions, {
