@@ -92,6 +92,7 @@ local function placeItem(item, coords, heading, shouldSnapToGround)
 
         -- Remove the item from the inventory
         TriggerServerEvent("wp-placeables:server:RemoveItem", itemName)
+        TriggerEvent('wais:addmissionxp:placeitem', 1) --added by pamela for wais battlepass
 
         LoadPropDict(itemModel)
 
